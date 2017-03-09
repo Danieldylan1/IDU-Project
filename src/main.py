@@ -2,12 +2,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-months1 = ["Jan 1999", "Feb 1999", "Mar 1999", "Apr 1999", "May 1999", "Jun 1999", "Jul 1999", "Aug 1999", "Sep 1999", "Oct 1999", "Nov 1999", "Dec 1999"] #Split months into 2 lists to get past limit
-months2 = ["Jan 2000", "Feb 2000", "Mar 2000", "Apr 2000", "May 2000", "Jun 2000", "Jul 2000", "Aug 2000", "Sep 2000", "Oct 2000", "Nov 2000", "Dec 2000", "Jan 2001"]
+months1 = [1/1999, 2/1999, 3/1999, 4/1999, 5/1999, 6/1999, 7/1999, 8/1999, 9/1999, 10/1999, 11/1999, 12/1999] #Split months into 2 lists to get past limit
+months2 = [1/2000, 2/2000, 3/2000, 4/2000, 5/2000, 6/2000, 7/2000, 8/2000, 9/2000, 10/2000, 11/2000, 12/2000, 1/2001]
 months = months1 + months2 #concatenate lists
 tropoData = [26.586, 31.765, 33.101, 33.710, 45.250, 55.208, 55.551, 48.713, 41.232, 37.143, 31.492, 23.823, 27.615, 32.059, 36.199, 38.928, 52.081, 53.245, 51.406, 43.303, 40.135, 31.772, 22.736, 28.187, 21]
 tempData = [11.2, 14.3, 15.3, 21.6, 22.5, 27.1, 30.6, 32.3, 27.5, 22.5, 17.2, 12.2, 10.7, 14.8, 17.2, 18.7, 26.6, 28.9, 31.5, 31.5, 27.1, 22.5, 16.3, 7.5, 9.2]
-print("ayy lmao")
-print("succ")
-plt.plot(tropoData, months)
+plt.scatter(tropoData, tempData)
 plt.show()
