@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #Open Files
-tfile = open('tropo.txt', 'r')
-sfile = open('surftemp.txt', 'r')
+tfile = open('data/tropo.txt', 'r')
+sfile = open('data/surftemp.txt', 'r')
 #Procedures
 def remove_empty(l):
     """
@@ -36,12 +36,15 @@ tdata = []
 sdata = []
 tlines = tfile.read().splitlines()
 slines = sfile.read().splitlines()
-tdata.append(3.414)
 for i in tlines:
     i.split(' ')
     tdata.append(i[9:])
 remove_empty(tdata)
 tdata = [float(x) for x in tdata]
+for x in tdata:
+    print(x)
+for x in sdata:
+    print(x)
 for j in slines:
     j.split(' ')
     sdata.append(j[9:])
