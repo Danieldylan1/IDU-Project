@@ -4,12 +4,6 @@ import matplotlib.pyplot as plt
 import time as t
 import sys
 
-<<<<<<< HEAD
-=======
-#Open Files
-tfile = open('data/tropo.txt', 'r')
-sfile = open('data/surftemp.txt', 'r')
->>>>>>> 9d62d4c4e13e081017beb8557d69733a843d039d
 #Procedures
 def remove_empty(l):
     """
@@ -63,10 +57,6 @@ for i in tlines:
     tdata.append(i[9:])
 remove_empty(tdata)
 tdata = [float(x) for x in tdata]
-for x in tdata:
-    print(x)
-for x in sdata:
-    print(x)
 for j in slines:
     j.split(' ')
     sdata.append(j[9:])
@@ -80,7 +70,7 @@ chooseAnalysis = ""
 graphText = "Please choose a graph or analysis to display: \n       Surface Temperature against Months (smonth) \n       Tropospheric Ozone against Months (tmonth) \n       Surface Temperature against Tropospheric Ozone (surfozone) \n       Our analysis of the data (analysis) "
 analysisText = "What would you like to see? (hypothesis, variables, location, data, climatechange, predictions) "
 while chooseGraph.upper() != "QUIT":
-    chooseGraph = input(graphText)
+    chooseGraph = input(graphtext)
     if chooseGraph.upper() == "SMONTH":
         plt.plot(sdata, 'b--')
         plt.title("Surface Temperature at 35 N, 85 W")
@@ -100,7 +90,6 @@ while chooseGraph.upper() != "QUIT":
     elif chooseGraph.upper() == "SURFOZONE":
         plt.scatter(sdata, tdata)
         plt.title("Comparison Between Surface Temperature and Tropospheric Ozone at 35 N, 85 W")
-<<<<<<< HEAD
         plt.xlabel("Surface Temperature (C)")
         plt.ylabel("Tropospheric Ozone (Dobson Units)")
         plt.plot(sdata, np.poly1d(np.polyfit(sdata, tdata, 1))(sdata), 'g:')
@@ -116,5 +105,3 @@ while chooseGraph.upper() != "QUIT":
         print("Quitting...")
     else:
         print("Invalid Input!")
-=======
->>>>>>> 9d62d4c4e13e081017beb8557d69733a843d039d
