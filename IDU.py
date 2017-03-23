@@ -4,6 +4,12 @@ import matplotlib.pyplot as plt
 import time as t
 import sys
 
+<<<<<<< HEAD
+=======
+#Open Files
+tfile = open('data/tropo.txt', 'r')
+sfile = open('data/surftemp.txt', 'r')
+>>>>>>> 9d62d4c4e13e081017beb8557d69733a843d039d
 #Procedures
 def remove_empty(l):
     """
@@ -57,6 +63,10 @@ for i in tlines:
     tdata.append(i[9:])
 remove_empty(tdata)
 tdata = [float(x) for x in tdata]
+for x in tdata:
+    print(x)
+for x in sdata:
+    print(x)
 for j in slines:
     j.split(' ')
     sdata.append(j[9:])
@@ -90,6 +100,7 @@ while chooseGraph.upper() != "QUIT":
     elif chooseGraph.upper() == "SURFOZONE":
         plt.scatter(sdata, tdata)
         plt.title("Comparison Between Surface Temperature and Tropospheric Ozone at 35 N, 85 W")
+<<<<<<< HEAD
         plt.xlabel("Surface Temperature (C)")
         plt.ylabel("Tropospheric Ozone (Dobson Units)")
         plt.plot(sdata, np.poly1d(np.polyfit(sdata, tdata, 1))(sdata), 'g:')
@@ -105,3 +116,5 @@ while chooseGraph.upper() != "QUIT":
         print("Quitting...")
     else:
         print("Invalid Input!")
+=======
+>>>>>>> 9d62d4c4e13e081017beb8557d69733a843d039d
