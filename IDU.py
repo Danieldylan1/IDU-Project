@@ -70,7 +70,7 @@ chooseAnalysis = ""
 graphText = "Please choose a graph or analysis to display: \n       Surface Temperature against Months (smonth) \n       Tropospheric Ozone against Months (tmonth) \n       Surface Temperature against Tropospheric Ozone (surfozone) \n       Our analysis of the data (analysis) "
 analysisText = "What would you like to see? (hypothesis, variables, location, data, climatechange, predictions) "
 while chooseGraph.upper() != "QUIT":
-    chooseGraph = input(graphtext)
+    chooseGraph = input(graphText)
     if chooseGraph.upper() == "SMONTH":
         plt.plot(sdata, 'b--')
         plt.title("Surface Temperature at 35 N, 85 W")
